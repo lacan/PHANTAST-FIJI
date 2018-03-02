@@ -358,7 +358,6 @@ public class PHANTAST_<T extends RealType<T> & NativeType<T>> implements Extende
 
 			if(nPasses > 1) {
 				if(maskImage == null || maskImage.getStackSize() != nPasses) {
-					IJ.log(inputImage.getRoi().toString());
 					maskImage = inputImage.createHyperStack(imageTitle+"- Output Mask", 1, nPasses, 1, 8);
 					maskImage.setTitle(imageTitle+"- Output Mask");
 				}
