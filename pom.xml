@@ -6,24 +6,30 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>sc.fiji</groupId>
-		<artifactId>pom-fiji</artifactId>
-		<version>6.1.3</version>
-		<relativePath />
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>19.2.0</version>
 	</parent>
 
 	<groupId>PHANTAST</groupId>
 	<artifactId>PHANTAST_</artifactId>
-	<version>0.3</version>
+	<version>0.3.1</version>
 
 	<name>Phase Contrast Segmentation Toolbox (PHANTAST)</name>
 	<description>The phae contrast segmentation toolbox (PHANTAST) enables high performance segmentation of phase contrast microscopy images</description>
-	<url>http://phantast.googlecode.com</url>
+	<url>https://github.com/nicjac/PHANTAST-FIJI</url>
+	<inceptionYear>2013</inceptionYear>
+	
 	<organization>
 		<name>University College London</name>
 		<url>http://www.ucl.ac.uk</url>
 	</organization>
-
+	<licenses>
+		<license>
+			<name>BSD 3-Clause "New" or "Revised" License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<developers>
 		<developer>
 			<id>nicjac</id>
@@ -33,8 +39,9 @@
 			<organization>University College London</organization>
 			<organizationUrl>http://www.ucl.ac.uk</organizationUrl>
 			<roles>
-				<role>architect</role>
-				<role>developer</role>
+  				<role>founder</role>
+                <role>lead</role>
+                <role>developer</role>
 			</roles>
 			<timezone>-6</timezone>
 		</developer>
@@ -46,7 +53,6 @@
 			<organization>Ecole Polytechnique Fédérale de Lausanne</organization>
 			<organizationUrl>https://epfl.ch</organizationUrl>
 			<roles>
-				<role>architect</role>
 				<role>developer</role>
 			</roles>
 			<timezone>+1</timezone>
@@ -90,8 +96,52 @@
 			<artifactId>imglib2-algorithm</artifactId>
 		</dependency>
 	</dependencies>
+	<contributors>
+		<contributor>
+			<name>Olivier Burri</name>
+			<url>http://biop.epfl.ch/INFO_Facility.html</url>
+			<roles>
+				<role>debugger</role>
+				<role>reviewer</role>
+			</roles>
+			<properties>
+				<id>oburri</id>
+			</properties>
+		</contributor>
+		<contributor>
+			<name>Jan Brocher</name>
+			<url>http://www.biovoxxel.de/</url>
+			<roles>
+				<role>debugger</role>
+				<role>reviewer</role>
+			</roles>
+			<properties>
+				<id>biovoxxel</id>
+			</properties>
+		</contributor>
 
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>N/A</name>
+			<archive>N/A</archive>
+		</mailingList>
+	</mailingLists>
+	
+		<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/nicjac/PHANTAST-FIJI/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>N/A</system>
+		<url>N/A</url>
+	</ciManagement>
+	
 	<properties>
 		<imagej.app.directory>C:\Fiji</imagej.app.directory>
+		<main-class>PHANTAST_</main-class>
+		<license.licenseName>N/A</license.licenseName>
+		<license.copyrightOwners>N/A</license.copyrightOwners>
 	</properties>
 </project>
