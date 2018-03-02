@@ -337,7 +337,8 @@ public class PHANTAST_<T extends RealType<T> & NativeType<T>> implements Extende
 		// Create the selection
 		IJ.run(LCThresholdedIP,"Convert to Mask", "method=Li background=Dark");
 		IJ.runPlugIn(LCThresholdedIP,"ij.plugin.filter.ThresholdToSelection", "");
-		Roi resultRoi = LCThresholdedIP.getRoi();
+		Roi resultRoi = (Roi) LCThresholdedIP.getRoi().clone();
+		LCThresholdedIP.deleteRoi();
 		resultRoi.setPosition(slice);
 		resultRoi.setName("Slice "+IJ.pad(slice,3));
 		
@@ -357,6 +358,7 @@ public class PHANTAST_<T extends RealType<T> & NativeType<T>> implements Extende
 
 			if(nPasses > 1) {
 				if(maskImage == null || maskImage.getStackSize() != nPasses) {
+					IJ.log(inputImage.getRoi().toString());
 					maskImage = inputImage.createHyperStack(imageTitle+"- Output Mask", 1, nPasses, 1, 8);
 					maskImage.setTitle(imageTitle+"- Output Mask");
 				}

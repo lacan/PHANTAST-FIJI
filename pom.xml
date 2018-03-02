@@ -91,4 +91,7 @@
 		</dependency>
 	</dependencies>
 
+	<properties>
+		<imagej.app.directory>C:\Fiji</imagej.app.directory>
+	</properties>
 </project>
